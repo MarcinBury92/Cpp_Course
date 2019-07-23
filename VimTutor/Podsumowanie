@@ -1,0 +1,65 @@
+        
+LEKCJA 2. PODSUMOWANIE
+
+  1. By usunąć znaki od kursora do następnego wyrazu, wpisz:   dw
+  2. By usunąć znaki od kursora do końca linii, wpisz:    d$
+  3. By usunąć całą linię:    dd
+  4. By powtórzyć ruch, poprzedź go liczbą:    2w
+  5. Format polecenia zmiany to:
+                operator  [liczba]  ruch
+  gdzie:
+   operator  - to, co trzeba zrobić (np.  d  dla usuwania)
+   [liczba]  - opcjonalne, ile razy powtórzyć ruch
+   ruch      - przenosi nad tekstem do operowania, takim jak  w (wyraz),
+	       $  (do końca linii) etc.
+
+  6. By przejść do początku linii, użyj zera:  0
+  7. By cofnąć poprzednie polecenie, wpisz:	  u  (małe u)
+     By cofnąć wszystkie zmiany w linii, wpisz:	  U  (wielkie U)
+     By cofnąć cofnięcie, wpisz:			  CTRL-R
+
+LEKCJA 3. PODSUMOWANIE
+
+
+  1. Aby wstawić tekst, który został wcześniej usunięty wciśnij  p . To
+     polecenie wstawia skasowany tekst PO kursorze (jeśli cała linia
+     została usunięta, zostanie ona umieszczona w linii poniżej kursora).
+
+  2. By zamienić znak pod kursorem, wciśnij  r  a potem znak, który ma zastąpić
+     oryginalny.
+
+  3. Operator change pozwala Ci na zastąpienie od kursora do miejsca, gdzie
+     zabrałby Cię ruch. Np. wpisz  ce  aby zamienić tekst od kursora do końca
+     wyrazu,  c$  aby zmienić tekst do końca linii.
+
+  4. Format do polecenia change (zmień):
+
+	c   [liczba]   obiekt
+
+Teraz przejdź do następnej lekcji.
+
+LEKCJA 4. PODSUMOWANIE
+
+
+  1. CTRL-G   pokaże Twoją pozycję w pliku i status pliku.  SHIFT-G przenosi
+	      Cię do końca pliku.
+     G        przenosi do końca pliku.
+     liczba G przenosi do linii [liczba].
+     gg       przenosi do pierwszej linii.
+
+  2. Wpisanie  /  a następnie łańcucha znaków szuka łańcucha DO PRZODU.
+     Wpisanie  ?  a następnie łańcucha znaków szuka łańcucha DO TYŁU.
+     Po wyszukiwaniu wciśnij  n  by znaleźć następne wystąpienie szukanej
+     frazy w tym samym kierunku lub  N  by szukać w kierunku przeciwnym.
+     CTRL-O przenosi do starszych pozycji, CTRL-I do nowszych.
+
+  3. Wpisanie  %  gdy kursor znajduje się na (,),[,],{, lub } lokalizuje
+     parujący znak.
+
+  4. By zamienić pierwszy stary na nowy w linii, wpisz      :s/stary/nowy
+     By zamienić wszystkie stary na nowy w linii, wpisz     :s/stary/nowy/g
+     By zamienić frazy pomiędzy dwoma liniami # wpisz      :#,#s/stary/nowy/g
+     By zamienić wszystkie wystąpienia w pliku, wpisz       :%s/stary/nowy/g
+By Vim prosił Cię o potwierdzenie, dodaj 'c' :%s/stary/nowy/gc
+
+

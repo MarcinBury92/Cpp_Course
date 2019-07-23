@@ -1,0 +1,70 @@
+
+
+--------------------Names-------------------------------------------------------
+Google+:
+-Names should be descriptive; avoid abbreviation,                                                                                             e.g. bloodpreessure
+-Functions should start with a capital letter and have a capital letter for each new word.                                                    e.g.AddTableEntry()
+-Filenames should be all lowercase and can include underscores (_) or dashes (-),                                                             e.g.my_class
+-Type names start with a capital letter and have a capital letter for each new word, with no underscores,                                     e.g.TableInfo
+-The names of variables (including function parameters) and data members are all lowercase, with underscores between words.                   e.g.table_name v tablename
+
+LLVM:
+-Type names (including classes, structs, enums, typedefs, etc) should be nouns and start with an upper-case letter                            e.g. TextFileReader
+-The Funcion name should be camel case, and start with a lower case letter                                                                    e.g. openFile() or isFoo()
+-Variable names should be nouns (as they represent state). The name should be camel case, and start with an upper case letter                 e.g. Leader or Boats
+
+Individual features and differences are many more,these are just basic differences!!!!! e.t.c.
+
+------------------example------------------------
+
+clang-format PalindromeGoogle.cpp -i --style=Google
+
+Google+
+bool CheckPalindome(string word) {
+  string wordsecond;
+  for (int i = 0; i < word.length(); i++) {
+    if (word[i] >= 'A' && word[i] <= 'Z') word[i] += 32;                             //different
+    if (word[i] != ' ') wordsecond += word[i];                                       //different
+  }
+  word = wordsecond;
+  for (int i = 0, j = word.length() - 1; i < j; i++, j--) {
+    if (word[i] != word[j]) return false;
+  }
+  return true;                                                                      //different
+}
+
+clang-format PalindromeLLVM.cpp -i --style=LLVM
+
+LLVM
+bool CheckPalindome(string word) {
+  string wordsecond;
+  for (int i = 0; i < word.length(); i++) {
+    if (word[i] >= 'A' && word[i] <= 'Z')
+      word[i] += 32;
+    if (word[i] != ' ')
+      wordsecond += word[i];
+  }
+  word = wordsecond;
+  for (int i = 0, j = word.length() - 1; i < j; i++, j--) {
+    if (word[i] != word[j])
+      return false;
+  }
+  return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
